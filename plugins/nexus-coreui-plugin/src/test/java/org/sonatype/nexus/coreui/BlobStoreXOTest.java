@@ -52,10 +52,10 @@ public class BlobStoreXOTest
     Set<ConstraintViolation<BlobStoreXO>> violationsJustName = validator.validate(blobStoreXOJustName);
     assertThat(NULL_VIOLATES_RULE, violationsJustName, hasSize(2));
 
-    BlobStoreXO blobStoreXONoAttibutes = new BlobStoreXO();
-    blobStoreXONoAttibutes.setName("someName");
-    blobStoreXONoAttibutes.setType("someType");
-    Set<ConstraintViolation<BlobStoreXO>> violationsNoAttributes = validator.validate(blobStoreXONoAttibutes);
+    BlobStoreXO blobStoreXONoAttributes = new BlobStoreXO();
+    blobStoreXONoAttributes.setName("someName");
+    blobStoreXONoAttributes.setType("someType");
+    Set<ConstraintViolation<BlobStoreXO>> violationsNoAttributes = validator.validate(blobStoreXONoAttributes);
     assertThat(NULL_VIOLATES_RULE, violationsNoAttributes, hasSize(1));
   }
 
