@@ -69,7 +69,7 @@ public class PerformanceChart
   }
 
   /**
-   * Builds a Javascript array to be inserted into the Google Charts API definition.
+   * Builds a JavaScript array to be inserted into the Google Charts API definition.
    */
   private static String buildChartData(final PerformanceData results) {
     final DecimalFormat format = new DecimalFormat("#.00");
