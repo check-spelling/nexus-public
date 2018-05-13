@@ -122,14 +122,14 @@ public class SearchResourceTest
     searchHitMaven = createComponent("foo", "test-repo", "format", "test", "1.0", assets);
     searchHitMaven.setId("id1");
 
-    List<AssetSearchResult> mulitple_assets = newArrayList(
+    List<AssetSearchResult> multiple_assets = newArrayList(
         createAsset("antlr-fooz.jar", "maven2", "test-repo", "first-sha1",
             of("extension", "jar", "classifier", "fooz", "version", "2.0")),
         createAsset("antlr.jar", "maven2", "test-repo", "first-sha1", of("extension", "jar")),
         createAsset("antlr.pom", "maven2", "test-repo", "first-sha1", of("extension", "pom"))
     );
     searchHitMaven_withMultipleAssets =
-        createComponent("fooz", "test-repo", "maven2", "test", "2.0", mulitple_assets);
+        createComponent("fooz", "test-repo", "maven2", "test", "2.0", multiple_assets);
     searchHitMaven_withMultipleAssets.setId("id2");
 
     List<AssetSearchResult> assets2 = newArrayList(
