@@ -201,8 +201,8 @@ public class StorageTxImplTest
   @Test
   public void setting_blob_fails_on_asset_with_blob_when_DENY_write_policy() {
     BlobRef blobRef = Mockito.mock(BlobRef.class);
-    AssetBlob asssetBlob = Mockito.mock(AssetBlob.class);
-    Mockito.when(asssetBlob.getBlobRef()).thenReturn(blobRef);
+    AssetBlob assetBlob = Mockito.mock(AssetBlob.class);
+    Mockito.when(assetBlob.getBlobRef()).thenReturn(blobRef);
     Mockito.when(asset.blobRef()).thenReturn(blobRef);
     StorageTxImpl underTest =
         new StorageTxImpl("test", "127.0.0.1", blobTx, db, "testRepo", WritePolicy.DENY, WritePolicySelector.DEFAULT,
