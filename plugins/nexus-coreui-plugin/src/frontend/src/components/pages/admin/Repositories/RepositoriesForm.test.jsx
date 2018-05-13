@@ -196,7 +196,7 @@ describe('RepositoriesForm', () => {
       screen.getAllByText(CONNECTORS.SAME_PORTS_ERROR),
     getDockerApiVersionCheckbox: () =>
       screen.getByRole('checkbox', {name: EDITOR.REGISTRY_API_SUPPORT_DESCR}),
-    getDockerAnonimousPullCheckbox: () =>
+    getDockerAnonymousPullCheckbox: () =>
       screen.getByRole('checkbox', {name: CONNECTORS.ALLOW_ANON_DOCKER_PULL.DESCR}),
     getDockerWritableRepositorySelect: () => screen.getByLabelText(EDITOR.WRITABLE.LABEL),
     getDockerRedeployLatestCheckbox: () => screen.getByLabelText(EDITOR.REDEPLOY_LATEST.DESCRIPTION),
@@ -1344,7 +1344,7 @@ describe('RepositoriesForm', () => {
       await TestUtils.changeField(selectors.getDockerSubdomainInput, repo.docker.subdomain);
 
       userEvent.click(selectors.getDockerApiVersionCheckbox());
-      userEvent.click(selectors.getDockerAnonimousPullCheckbox());
+      userEvent.click(selectors.getDockerAnonymousPullCheckbox());
 
       userEvent.click(selectors.getTransferListOption(repo.group.memberNames[0]));
 
