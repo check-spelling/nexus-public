@@ -37,7 +37,7 @@ import org.sonatype.nexus.repository.Repository;
 import org.sonatype.nexus.repository.content.Asset;
 import org.sonatype.nexus.repository.content.AssetBlob;
 import org.sonatype.nexus.repository.content.facet.ContentFacet;
-import org.sonatype.nexus.repository.tools.BlobUnavilableException;
+import org.sonatype.nexus.repository.tools.BlobUnavailableException;
 import org.sonatype.nexus.repository.tools.DeadBlobFinder;
 import org.sonatype.nexus.repository.tools.DeadBlobResult;
 import org.sonatype.nexus.repository.tools.MismatchedSHA1Exception;
@@ -179,7 +179,7 @@ public class DatastoreDeadBlobFinder
     catch (MismatchedSHA1Exception pae) {
       return new DeadBlobResult<>(repositoryName, asset, SHA1_DISAGREEMENT, pae.getMessage());
     }
-    catch (BlobUnavilableException e) {
+    catch (BlobUnavailableException e) {
       return new DeadBlobResult<>(repositoryName, asset, UNAVAILABLE_BLOB, e.getMessage() == null ? "Blob inputstream unavailable" : e.getMessage());
     }
     catch (Exception e) {
@@ -191,7 +191,7 @@ public class DatastoreDeadBlobFinder
   /**
    * Verify that the Blob exists and is in agreement with the stored Asset metadata.;
    */
-  private void verifyBlob(final Blob blob, final Asset asset) throws MismatchedSHA1Exception, BlobUnavilableException, IOException {
+  private void verifyBlob(final Blob blob, final Asset asset) throws MismatchedSHA1Exception, BlobUnavailableException, IOException {
     BlobMetrics metrics = blob.getMetrics();
 
     String assetChecksum =
@@ -202,7 +202,7 @@ public class DatastoreDeadBlobFinder
 
     try (InputStream blobstream = blob.getInputStream()) {
       if (metrics.getContentSize() > 0 && blobstream.available() == 0) {
-        throw new BlobUnavilableException();
+        throw new BlobUnavailableException();
       }
     }
   }

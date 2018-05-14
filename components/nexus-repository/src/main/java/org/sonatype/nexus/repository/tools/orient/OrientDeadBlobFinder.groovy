@@ -29,7 +29,7 @@ import org.sonatype.nexus.repository.storage.Asset
 import org.sonatype.nexus.repository.storage.AssetEntityAdapter
 import org.sonatype.nexus.repository.storage.StorageFacet
 import org.sonatype.nexus.repository.storage.StorageTx
-import org.sonatype.nexus.repository.tools.BlobUnavilableException
+import org.sonatype.nexus.repository.tools.BlobUnavailableException
 import org.sonatype.nexus.repository.tools.DeadBlobFinder
 import org.sonatype.nexus.repository.tools.DeadBlobResult
 import org.sonatype.nexus.repository.tools.MismatchedSHA1Exception
@@ -165,7 +165,7 @@ class OrientDeadBlobFinder
     catch (MismatchedSHA1Exception pae) {
       return new DeadBlobResult(repositoryName, asset, SHA1_DISAGREEMENT, pae.message)
     }
-    catch (BlobUnavilableException e) {
+    catch (BlobUnavailableException e) {
       return new DeadBlobResult(repositoryName, asset, UNAVAILABLE_BLOB, e.message ?: 'Blob inputstream unavailable')
     }
     catch (Throwable e) {
@@ -187,7 +187,7 @@ class OrientDeadBlobFinder
       blobstream = blob.inputStream
       if (metrics.contentSize > 0) {
         if (!blobstream.available()) {
-          throw new BlobUnavilableException()
+          throw new BlobUnavailableException()
         }
       }
     }
