@@ -75,7 +75,7 @@ public class DatastoreDeadBlobFinder
   /**
    * Based on the db metadata, confirm that all Blobs exist and sha1 values match. Can optionally ignore any records
    * that don't have a blobRef, which is expected for NuGet search results.
-   * @parem repository  The Repository to inspect
+   * @param repository  The Repository to inspect
    * @param ignoreMissingBlobRefs (defaults to true)
    */
   @Override

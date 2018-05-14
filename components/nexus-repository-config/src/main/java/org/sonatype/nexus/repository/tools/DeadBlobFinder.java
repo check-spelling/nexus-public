@@ -28,7 +28,7 @@ public interface DeadBlobFinder<A>
   /**
    * Based on the db metadata, confirm that all Blobs exist and sha1 values match. Can optionally ignore any records
    * that don't have a blobRef, which is expected for NuGet search results.
-   * @parem repository  The Repository to inspect
+   * @param repository  The Repository to inspect
    */
   default List<DeadBlobResult<A>> find(@NotNull final Repository repository) {
     return find(repository, true);
@@ -37,7 +37,7 @@ public interface DeadBlobFinder<A>
   /**
    * Based on the db metadata, confirm that all Blobs exist and sha1 values match. Can optionally ignore any records
    * that don't have a blobRef, which is expected for NuGet search results.
-   * @parem repository  The Repository to inspect
+   * @param repository  The Repository to inspect
    * @param ignoreMissingBlobRefs
    */
   List<DeadBlobResult<A>> find(@NotNull final Repository repository, boolean ignoreMissingBlobRefs);
