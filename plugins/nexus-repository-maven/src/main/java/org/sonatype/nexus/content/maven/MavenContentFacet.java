@@ -109,7 +109,7 @@ public interface MavenContentFacet
    *
    * @since 3.30
    */
-  Set<GAV> findGavsWithSnaphots(int minimumRetained);
+  Set<GAV> findGavsWithSnapshots(int minimumRetained);
 
   /**
    * Find Components by Group Artifact Version(GAVs)

@@ -55,8 +55,8 @@ public class Maven2ComponentStore
   }
 
   @Transactional
-  public Set<GAV> findGavsWithSnaphots(final int repositoryId, final int minimumRetained) {
-    return dao().findGavsWithSnaphots(repositoryId, minimumRetained);
+  public Set<GAV> findGavsWithSnapshots(final int repositoryId, final int minimumRetained) {
+    return dao().findGavsWithSnapshots(repositoryId, minimumRetained);
   }
 
   @Transactional

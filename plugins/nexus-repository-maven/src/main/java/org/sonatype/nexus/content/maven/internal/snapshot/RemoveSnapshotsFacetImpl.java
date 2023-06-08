@@ -118,7 +118,7 @@ public class RemoveSnapshotsFacetImpl
         repository.getName());
 
     MavenContentFacet facet = repository.facet(MavenContentFacet.class);
-    return facet.findGavsWithSnaphots(minimumRetained);
+    return facet.findGavsWithSnapshots(minimumRetained);
   }
 
   /**
