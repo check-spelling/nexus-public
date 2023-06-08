@@ -79,7 +79,7 @@ class LogCustomizer
         supportBundle << new FileContentSourceSupport(LOG, "$prefix/${file.name}", file, priority)
       }
       else {
-        log.debug 'Skipping non-existent file: {}', file
+        log.debug 'Skipping nonexistent file: {}', file
       }
     }
 

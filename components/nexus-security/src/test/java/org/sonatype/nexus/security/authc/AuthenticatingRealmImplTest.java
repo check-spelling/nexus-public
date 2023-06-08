@@ -143,7 +143,7 @@ public class AuthenticatingRealmImplTest
   @Test
   public void testNoneExistentUser() throws Exception {
     buildTestAuthenticationConfig(CUser.STATUS_ACTIVE);
-    UsernamePasswordToken upToken = new UsernamePasswordToken("non-existent-user", "password");
+    UsernamePasswordToken upToken = new UsernamePasswordToken("nonexistent-user", "password");
 
     thrown.expect(UnknownAccountException.class);
     realm.getAuthenticationInfo(upToken);

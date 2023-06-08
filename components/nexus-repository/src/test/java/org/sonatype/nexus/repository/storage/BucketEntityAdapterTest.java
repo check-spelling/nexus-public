@@ -80,7 +80,7 @@ public class BucketEntityAdapterTest
      * We now wrap this tracking map so it detaches when this isn't the case.
      *
      * It also wasn't obvious when you were modifying attributes. For example
-     * just accessing a non-existent child section implicitly added it to the
+     * just accessing a nonexistent child section implicitly added it to the
      * map, causing it to mutate...
      */
 

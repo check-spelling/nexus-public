@@ -188,7 +188,7 @@ class OrientApiKeyStoreTest
 
     underTest.purgeApiKeys()
 
-    //Verify that api keys that belong to non-existent users are purged
+    //Verify that api keys that belong to nonexistent users are purged
     assertThat(underTest.getApiKey(PRINCIPAL_A_DOMAIN, principalA), equalTo(apiKeyForPrincipalA))
     assertThat(underTest.getApiKey(PRINCIPAL_B_DOMAIN, principalB), nullValue())
   }
@@ -212,7 +212,7 @@ class OrientApiKeyStoreTest
     catch (TaskInterruptedException expected) {
     }
 
-    //Verify that no api keys were purged even though they belong to non-existent users
+    //Verify that no api keys were purged even though they belong to nonexistent users
     assertThat(underTest.getApiKey(PRINCIPAL_A_DOMAIN, principalA), equalTo(apiKeyForPrincipalA))
     assertThat(underTest.getApiKey(PRINCIPAL_B_DOMAIN, principalB), equalTo(apiKeyForPrincipalB))
   }
@@ -242,7 +242,7 @@ class OrientApiKeyStoreTest
 
     underTest.purgeApiKeys()
 
-    // verify that api keys that belong to non-existent users are purged
+    // verify that api keys that belong to nonexistent users are purged
     assertThat(underTest.getApiKey(PRINCIPAL_A_DOMAIN, principalA), equalTo(apiKeyForPrincipalA))
     assertThat(underTest.getApiKey(PRINCIPAL_B_DOMAIN, principalB), nullValue())
   }

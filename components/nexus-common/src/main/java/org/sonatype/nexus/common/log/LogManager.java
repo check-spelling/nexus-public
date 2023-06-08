@@ -64,7 +64,7 @@ public interface LogManager
    * Provides access to named log-file streams.
    *
    * @param fileName name of log file to fetch
-   * @return Stream to log file or {@code null} if non-existent.
+   * @return Stream to log file or {@code null} if nonexistent.
    */
   @Nullable
   InputStream getLogFileStream(String fileName, long fromByte, long bytesCount) throws IOException;

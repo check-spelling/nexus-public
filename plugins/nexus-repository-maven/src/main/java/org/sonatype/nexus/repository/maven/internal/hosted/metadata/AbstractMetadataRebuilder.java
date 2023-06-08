@@ -365,7 +365,7 @@ public abstract class AbstractMetadataRebuilder
         MultipleFailures failures);
 
     /**
-     * Verifies and may fix/create the broken/non-existent Maven hashes (.sha1/.md5 files).
+     * Verifies and may fix/create the broken/nonexistent Maven hashes (.sha1/.md5 files).
      * @return true if the checksum was rebuilt
      */
     protected boolean mayUpdateChecksum(final MavenPath mavenPath, final HashType hashType) {

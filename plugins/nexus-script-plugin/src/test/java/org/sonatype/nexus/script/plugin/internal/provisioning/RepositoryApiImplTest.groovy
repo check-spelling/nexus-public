@@ -67,7 +67,7 @@ class RepositoryApiImplTest
       thrown ClassCastException
   }
   
-  void 'Cannot validate a group that contains non-existent members'() {
+  void 'Cannot validate a group that contains nonexistent members'() {
     when: 'Including a member that does not exist'
       api.validateGroupMembers(configWithAttributes([group:[memberNames: ['foo']]]))
 

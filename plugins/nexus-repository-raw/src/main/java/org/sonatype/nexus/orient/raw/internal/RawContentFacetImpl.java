@@ -201,7 +201,7 @@ public class RawContentFacetImpl
       }
     }
     if (asset == null) {
-      log.debug("Attempting to set cache info for non-existent raw component {}", path);
+      log.debug("Attempting to set cache info for nonexistent raw component {}", path);
       return;
     }
 

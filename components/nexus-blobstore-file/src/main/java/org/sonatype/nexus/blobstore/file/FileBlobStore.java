@@ -528,7 +528,7 @@ public class FileBlobStore
       if (blobAttributes == null) {
         // This could happen under some concurrent situations (two threads try to delete the same blob)
         // but it can also occur if the deleted index refers to a manually-deleted blob.
-        log.warn("Attempt to mark-for-delete non-existent blob {}, hard deleting instead", blobId);
+        log.warn("Attempt to mark-for-delete nonexistent blob {}, hard deleting instead", blobId);
         return deleteHard(blobId);
       }
       else if (blobAttributes.isDeleted()) {
@@ -1103,7 +1103,7 @@ public class FileBlobStore
     try {
       FileBlobAttributes blobAttributes = new FileBlobAttributes(blobPath);
       if (!blobAttributes.load()) {
-        log.warn("Attempt to access non-existent blob attributes file {} for blob {}", attributePath(blobId), blobId);
+        log.warn("Attempt to access nonexistent blob attributes file {} for blob {}", attributePath(blobId), blobId);
         return null;
       }
       else {
