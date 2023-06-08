@@ -71,7 +71,7 @@ Ext.define('NX.util.condition.Conjunction', {
   },
 
   /**
-   * @overrdie
+   * @override
    * @returns {String}
    */
   toString: function () {
