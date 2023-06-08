@@ -5191,11 +5191,11 @@
     text-align: center;
 }
 
-.x-colopicker-escape-overflow {
+.x-colorpicker-escape-overflow {
     overflow: visible;
 }
 
-.x-colopicker-escape-overflow >.x-box-inner {
+.x-colorpicker-escape-overflow >.x-box-inner {
     overflow: visible;
 }
 
