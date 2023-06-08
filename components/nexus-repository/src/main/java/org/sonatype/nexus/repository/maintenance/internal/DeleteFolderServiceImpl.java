@@ -146,18 +146,18 @@ public class DeleteFolderServiceImpl
                                          final DateTime timestamp,
                                          final ComponentMaintenance componentMaintenance)
   {
-    EntityId componenetId = null;
+    EntityId componentId = null;
     Asset asset = assetStore.getById(assetId);
     if (timestamp.isAfter(asset.blobCreated()) && canDeleteAsset(repository, asset)) {
       try {
         componentMaintenance.deleteAsset(assetId);
-        componenetId = asset.componentId();
+        componentId = asset.componentId();
       }
       catch (Exception e) {
         log.error("Failed to delete an asset - skipping.", e);
       }
     }
-    return Optional.ofNullable(componenetId);
+    return Optional.ofNullable(componentId);
   }
 
   private boolean canDeleteAsset(final Repository repository, final Asset asset) {
