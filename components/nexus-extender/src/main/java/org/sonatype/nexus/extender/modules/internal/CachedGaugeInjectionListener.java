@@ -23,7 +23,7 @@ import static com.google.common.base.Preconditions.checkArgument;
 import static com.google.common.base.Preconditions.checkNotNull;
 
 /**
- * Registers the supplied cache gauage to the metrics registry
+ * Registers the supplied cache gauge to the metrics registry
  * @since 3.26
  */
 public class CachedGaugeInjectionListener<T>
