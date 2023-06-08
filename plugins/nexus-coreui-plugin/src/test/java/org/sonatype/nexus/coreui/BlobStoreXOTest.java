@@ -83,7 +83,7 @@ public class BlobStoreXOTest
     Map<String, Map<String, Object>> attributes = new HashMap<>();
     Map<String, Object> attribute = new HashMap<>();
     attribute.put("testAttribute", null);
-    attributes.put("attibute1", attribute);
+    attributes.put("attribute1", attribute);
 
     BlobStoreXO blobStore = new BlobStoreXO();
     blobStore.setType("someType");

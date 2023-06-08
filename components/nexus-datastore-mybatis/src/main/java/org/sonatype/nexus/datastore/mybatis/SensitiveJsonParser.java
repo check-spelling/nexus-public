@@ -37,11 +37,11 @@ final class SensitiveJsonParser
 
   SensitiveJsonParser(final JsonParser delegate,
                       final PasswordHelper passwordHelper,
-                      final Predicate<String> atributeFilter)
+                      final Predicate<String> attributeFilter)
   {
     super(delegate);
     this.passwordHelper = checkNotNull(passwordHelper);
-    this.attributeFilter = checkNotNull(atributeFilter);
+    this.attributeFilter = checkNotNull(attributeFilter);
   }
 
   @Override
