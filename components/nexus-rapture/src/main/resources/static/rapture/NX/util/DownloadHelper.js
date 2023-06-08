@@ -40,7 +40,7 @@ Ext.define('NX.util.DownloadHelper', {
   windowId: 'nx-download-frame',
 
   /**
-   * Window names in IE are very picky, using '_' instead of '-' so that its its a valid javascript identifier.
+   * Window names in IE are very picky, using '_' instead of '-' so that it's a valid javascript identifier.
    *
    * @private
    */
