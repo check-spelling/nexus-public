@@ -110,7 +110,7 @@ public class ElasticSearchIndexServiceImplJsonTest {
   }
 
   @Test
-  public void testRemoveAttributesNotConen() throws JsonProcessingException {
+  public void testRemoveAttributesNotConan() throws JsonProcessingException {
     String json = "{\n"
         + "  \"assets\": [\n"
         + "    {\n"
