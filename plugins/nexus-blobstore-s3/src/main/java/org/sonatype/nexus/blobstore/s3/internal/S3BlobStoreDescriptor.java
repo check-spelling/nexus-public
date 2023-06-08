@@ -90,7 +90,7 @@ public class S3BlobStoreDescriptor
                                final BlobStoreManager blobStoreManager) {
     super(quotaService);
     this.blobStoreManager = checkNotNull(blobStoreManager);
-    s3SelectOptions = intializeSelectOptions();
+    s3SelectOptions = initializeSelectOptions();
   }
 
   @Override
@@ -132,7 +132,7 @@ public class S3BlobStoreDescriptor
     return s3SelectOptions;
   }
 
-  private Map<String, List<SelectOption>> intializeSelectOptions() {
+  private Map<String, List<SelectOption>> initializeSelectOptions() {
     return ImmutableMap
         .of("regions", getRegionOptions(), "encryptionTypes", getEncryptionTypes(), "signerTypes", getSignerTypes());
   }
