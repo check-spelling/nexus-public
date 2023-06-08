@@ -183,7 +183,7 @@ public class DefaultCapabilityReferenceTest
   }
 
   /**
-   * Capability is not activated activated again once it has been activated.
+   * Capability is not activated again once it has been activated.
    */
   @Test
   public void activateWhenActive() throws Exception {
