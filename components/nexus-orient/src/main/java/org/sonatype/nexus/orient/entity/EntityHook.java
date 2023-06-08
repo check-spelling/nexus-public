@@ -220,7 +220,7 @@ public final class EntityHook
     if (typeName != null) {
       final EntityAdapter adapter = recordingAdapters.get(typeName);
       if (adapter != null) {
-        final ODatabaseInternal db = getCurrrentDb();
+        final ODatabaseInternal db = getCurrentDb();
         if (db != null) {
           // workaround OrientDB 2.1 issue where in-TX dictionary updates are not replicated
           if (db.getStorage().isDistributed() && adapter instanceof SingletonEntityAdapter) {
@@ -244,7 +244,7 @@ public final class EntityHook
    * But when performing a commit we always return the connection which is being committed, so we can
    * track changes even when another connection is used to "fix" records during that commit.
    */
-  private ODatabaseDocumentInternal getCurrrentDb() {
+  private ODatabaseDocumentInternal getCurrentDb() {
     ODatabase db = commitDb.get();
     if (db == null) {
       db = ODatabaseRecordThreadLocal.instance().get();
