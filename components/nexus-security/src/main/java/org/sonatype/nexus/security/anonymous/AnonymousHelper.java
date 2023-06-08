@@ -37,7 +37,7 @@ public class AnonymousHelper
   }
 
   /**
-   * Check given given subject is anonymous.
+   * Check given subject is anonymous.
    */
   public static boolean isAnonymous(@Nullable final Subject subject) {
     return subject != null && subject.getPrincipals() instanceof AnonymousPrincipalCollection;
