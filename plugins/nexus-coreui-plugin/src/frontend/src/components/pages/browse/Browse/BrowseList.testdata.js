@@ -74,10 +74,10 @@ export const FIELDS = {
 };
 
 export const ROW_INDICES = {
-  MAVEN_CENTRAL: 1, // health-check/fiewall status available
+  MAVEN_CENTRAL: 1, // health-check/firewall status available
   MAVEN_PUBLIC: 2,
   NUGET_HOSTED: 6,
-  NUGET_ORG_PROXY: 7 // health-check/fiewall status available
+  NUGET_ORG_PROXY: 7 // health-check/firewall status available
 };
 
 export const READ_HEALTH_CHECK_DATA = [

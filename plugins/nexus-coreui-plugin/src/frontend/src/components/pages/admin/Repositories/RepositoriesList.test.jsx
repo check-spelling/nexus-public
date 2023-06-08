@@ -651,10 +651,10 @@ describe('RepositoriesList', function () {
 
   describe('Firewall Report Column', () => {
     const rowIndices = {
-      MAVEN_CENTRAL: 1, // fiewall status available
+      MAVEN_CENTRAL: 1, // firewall status available
       MAVEN_PUBLIC: 2,
       NUGET_HOSTED: 6,
-      NUGET_ORG_PROXY: 7 // fiewall status available
+      NUGET_ORG_PROXY: 7 // firewall status available
     };
 
     const {
