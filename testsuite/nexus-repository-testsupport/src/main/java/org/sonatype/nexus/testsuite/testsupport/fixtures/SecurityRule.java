@@ -368,7 +368,7 @@ public class SecurityRule
     AnonymousManager anonymousManager = anonymousConfigurationProvider.get();
     if (originalAnonymousConfiguration == null) {
       AnonymousConfiguration current = anonymousManager.getConfiguration();
-      // The original one can't be modified, technically we can't quite get back the orign
+      // The original one can't be modified, technically we can't quite get back the origin
       originalAnonymousConfiguration = anonymousManager.newConfiguration();
       originalAnonymousConfiguration.setEnabled(current.isEnabled());
       originalAnonymousConfiguration.setRealmName(current.getRealmName());

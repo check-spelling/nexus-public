@@ -69,8 +69,8 @@ public class CleanupBootServiceTest
     when(taskScheduler.createTaskConfigurationInstance(CleanupTaskDescriptor.TYPE_ID)).thenReturn(taskConfig);
     when(taskScheduler.getScheduleFactory()).thenReturn(scheduleFactory);
 
-    when(scheduleFactory.cron(any(), any())).thenAnswer(invokation -> {
-      return new Cron((Date) invokation.getArguments()[0], (String) invokation.getArguments()[1]);
+    when(scheduleFactory.cron(any(), any())).thenAnswer(invocation -> {
+      return new Cron((Date) invocation.getArguments()[0], (String) invocation.getArguments()[1]);
     });
   }
 

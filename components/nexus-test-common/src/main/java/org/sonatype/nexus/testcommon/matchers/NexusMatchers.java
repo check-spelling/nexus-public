@@ -66,7 +66,7 @@ public class NexusMatchers
 
   /*
    * Creates a {@link Matcher} for {@link Stream}. Note that the stream cannot have been consumed,
-   * and that the matcher is a termainl operation for the Stream.
+   * and that the matcher is a terminal operation for the Stream.
    */
   @SafeVarargs
   public static <E> Matcher<Stream<E>> streamContains(final E... items) {

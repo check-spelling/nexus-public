@@ -51,7 +51,7 @@ class BucketManagerTest
 
   BucketManager bucketManager = new BucketManager()
 
-  def 'set lifecycle on pre-existing bucket if not present'() {
+  def 'set lifecycle on preexisting bucket if not present'() {
     given: 'bucket already exists, but has null lifecycle configuration'
       s3.doesBucketExistV2('mybucket') >> true
       def cfg = new MockBlobStoreConfiguration()

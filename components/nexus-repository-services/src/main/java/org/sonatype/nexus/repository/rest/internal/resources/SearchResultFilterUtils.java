@@ -117,7 +117,7 @@ public class SearchResultFilterUtils
   }
 
   /**
-   * Filters the compoonent's asset list by the provided parameter map. See {@link #filterAsset(AssetSearchResult, Map)}
+   * Filters the component's asset list by the provided parameter map. See {@link #filterAsset(AssetSearchResult, Map)}
    */
   public Stream<AssetSearchResult> filterComponentAssets(
       final ComponentSearchResult component,

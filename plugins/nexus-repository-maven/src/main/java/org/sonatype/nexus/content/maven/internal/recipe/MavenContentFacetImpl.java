@@ -530,9 +530,9 @@ public class MavenContentFacetImpl
   }
 
   @Override
-  public Set<GAV> findGavsWithSnaphots(final int minimumRetained) {
+  public Set<GAV> findGavsWithSnapshots(final int minimumRetained) {
     Maven2ComponentStore componentStore = (Maven2ComponentStore)stores().componentStore;
-    return componentStore.findGavsWithSnaphots(contentRepositoryId(), minimumRetained);
+    return componentStore.findGavsWithSnapshots(contentRepositoryId(), minimumRetained);
   }
 
   @Override

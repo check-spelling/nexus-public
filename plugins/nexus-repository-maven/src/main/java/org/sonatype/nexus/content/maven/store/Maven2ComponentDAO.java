@@ -49,7 +49,7 @@ public interface Maven2ComponentDAO
    *
    * @since 3.30
    */
-  Set<GAV> findGavsWithSnaphots(@Param("repositoryId") final int repositoryId,
+  Set<GAV> findGavsWithSnapshots(@Param("repositoryId") final int repositoryId,
                                 @Param("minimumRetained") final int minimumRetained);
 
   /**

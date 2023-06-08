@@ -188,7 +188,7 @@ public class MemoryBlobSessionTest
       session.getTransaction().commit();
     }
     catch (Throwable t) {
-      //explictly having an assertion pleases sonar
+      //explicitly having an assertion pleases sonar
       fail("transaction commit not reached");
     }
 
@@ -199,7 +199,7 @@ public class MemoryBlobSessionTest
       session.getTransaction().commit();
     }
     catch (Throwable t) {
-      //explictly having an assertion pleases sonar
+      //explicitly having an assertion pleases sonar
       fail("transaction commit not reached");
     }
   }
@@ -213,7 +213,7 @@ public class MemoryBlobSessionTest
       session.getTransaction().rollback();
     }
     catch (Throwable t) {
-      //explictly having an assertion pleases sonar
+      //explicitly having an assertion pleases sonar
       fail("rollback may have failed");
     }
 
@@ -224,7 +224,7 @@ public class MemoryBlobSessionTest
       session.getTransaction().rollback();
     }
     catch (Throwable t) {
-      //explictly having an assertion pleases sonar
+      //explicitly having an assertion pleases sonar
       fail("rollback may have failed");
     }
   }

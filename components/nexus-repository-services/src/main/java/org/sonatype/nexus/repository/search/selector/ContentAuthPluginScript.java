@@ -103,7 +103,7 @@ public class ContentAuthPluginScript
           TimeUnit.MILLISECONDS.sleep(1);
         }
         catch (InterruptedException e) { // NOSONAR: pooled ES thread
-          log.error("Thread.sleep interruped", e);
+          log.error("Thread.sleep interrupted", e);
         }
       }
     }

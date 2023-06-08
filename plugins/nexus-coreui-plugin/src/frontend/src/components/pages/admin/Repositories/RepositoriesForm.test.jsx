@@ -196,7 +196,7 @@ describe('RepositoriesForm', () => {
       screen.getAllByText(CONNECTORS.SAME_PORTS_ERROR),
     getDockerApiVersionCheckbox: () =>
       screen.getByRole('checkbox', {name: EDITOR.REGISTRY_API_SUPPORT_DESCR}),
-    getDockerAnonimousPullCheckbox: () =>
+    getDockerAnonymousPullCheckbox: () =>
       screen.getByRole('checkbox', {name: CONNECTORS.ALLOW_ANON_DOCKER_PULL.DESCR}),
     getDockerWritableRepositorySelect: () => screen.getByLabelText(EDITOR.WRITABLE.LABEL),
     getDockerRedeployLatestCheckbox: () => screen.getByLabelText(EDITOR.REDEPLOY_LATEST.DESCRIPTION),
@@ -288,7 +288,7 @@ describe('RepositoriesForm', () => {
   ];
 
   const MAVEN_CLEANUP_RESPONSE = [
-    {id: 'policy-all-fomats', name: 'policy-all-fomats'},
+    {id: 'policy-all-formats', name: 'policy-all-formats'},
     {id: 'policy-maven-1', name: 'policy-maven-1'},
     {id: 'policy-maven-2', name: 'policy-maven-2'}
   ];
@@ -396,7 +396,7 @@ describe('RepositoriesForm', () => {
           writePolicy: 'ALLOW'
         },
         component: {proprietaryComponents: true},
-        cleanup: {policyNames: ['policy-all-fomats', 'policy-maven-1']},
+        cleanup: {policyNames: ['policy-all-formats', 'policy-maven-1']},
         maven: {
           contentDisposition: 'INLINE',
           layoutPolicy: 'STRICT',
@@ -1344,7 +1344,7 @@ describe('RepositoriesForm', () => {
       await TestUtils.changeField(selectors.getDockerSubdomainInput, repo.docker.subdomain);
 
       userEvent.click(selectors.getDockerApiVersionCheckbox());
-      userEvent.click(selectors.getDockerAnonimousPullCheckbox());
+      userEvent.click(selectors.getDockerAnonymousPullCheckbox());
 
       userEvent.click(selectors.getTransferListOption(repo.group.memberNames[0]));
 

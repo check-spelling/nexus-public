@@ -34,7 +34,7 @@ import org.joda.time.DateTime;
 public interface ComponentAssetTestHelper
 {
   /**
-   * Get the created time of the the asset at the path in the given repository.
+   * Get the created time of the asset at the path in the given repository.
    *
    * @param repository the containing repository
    * @param path the path of the asset

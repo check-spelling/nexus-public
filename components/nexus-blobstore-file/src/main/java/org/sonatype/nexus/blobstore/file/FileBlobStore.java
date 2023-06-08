@@ -528,7 +528,7 @@ public class FileBlobStore
       if (blobAttributes == null) {
         // This could happen under some concurrent situations (two threads try to delete the same blob)
         // but it can also occur if the deleted index refers to a manually-deleted blob.
-        log.warn("Attempt to mark-for-delete non-existent blob {}, hard deleting instead", blobId);
+        log.warn("Attempt to mark-for-delete nonexistent blob {}, hard deleting instead", blobId);
         return deleteHard(blobId);
       }
       else if (blobAttributes.isDeleted()) {
@@ -917,7 +917,7 @@ public class FileBlobStore
 
     //rather than using the blobId stream here, need to use a different means of walking the file tree, as
     //we are deleting items on the way through, and apparently on *nix systems, deleting files that you are about to
-    //walk over causes a FileNotFoundException to be thrown and the walking stops.  Overridding the visitFileFailed
+    //walk over causes a FileNotFoundException to be thrown and the walking stops.  Overriding the visitFileFailed
     //method allows us to get past that
     Files.walkFileTree(contentDir, EnumSet.of(FOLLOW_LINKS), Integer.MAX_VALUE, new SimpleFileVisitor<Path>(){
       @Override
@@ -1103,7 +1103,7 @@ public class FileBlobStore
     try {
       FileBlobAttributes blobAttributes = new FileBlobAttributes(blobPath);
       if (!blobAttributes.load()) {
-        log.warn("Attempt to access non-existent blob attributes file {} for blob {}", attributePath(blobId), blobId);
+        log.warn("Attempt to access nonexistent blob attributes file {} for blob {}", attributePath(blobId), blobId);
         return null;
       }
       else {

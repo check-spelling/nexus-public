@@ -48,7 +48,7 @@ public class RealmConfigurationDAOTest
   }
 
   @After
-  public void cleaup() {
+  public void cleanup() {
     session.close();
   }
 

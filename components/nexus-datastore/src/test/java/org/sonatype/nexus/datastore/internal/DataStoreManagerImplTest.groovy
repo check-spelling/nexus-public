@@ -198,7 +198,7 @@ class DataStoreManagerImplTest
   }
 
   @Test
-  void 'Data stores are started or shutdown when manager starts or shutsdown'() {
+  void 'Data stores are started or shutdown when manager starts or shuts down'() {
 
     def testStore = underTest.get('test')
     def exampleStore = underTest.get('example')

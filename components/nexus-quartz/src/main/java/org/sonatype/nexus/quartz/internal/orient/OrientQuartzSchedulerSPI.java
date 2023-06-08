@@ -87,13 +87,13 @@ public class OrientQuartzSchedulerSPI
 
       // simulate signals Quartz would have sent
       quartzScheduler.getSchedulerSignaler().signalSchedulingChange(getNextFireMillis(trigger));
-      quartzScheduler.notifySchedulerListenersSchduled(trigger);
+      quartzScheduler.notifySchedulerListenersScheduled(trigger);
     }
     else if (isLimitedToThisNode(trigger)) {
       // special "run-now" task which was created on a different node to where it will run
       // when this happens we ping the scheduler to make sure it runs as soon as possible
       quartzScheduler.getSchedulerSignaler().signalSchedulingChange(0L);
-      quartzScheduler.notifySchedulerListenersSchduled(trigger);
+      quartzScheduler.notifySchedulerListenersScheduled(trigger);
     }
   }
 
@@ -105,7 +105,7 @@ public class OrientQuartzSchedulerSPI
       // simulate signals Quartz would have sent
       quartzScheduler.getSchedulerSignaler().signalSchedulingChange(getNextFireMillis(trigger));
       quartzScheduler.notifySchedulerListenersUnscheduled(trigger.getKey());
-      quartzScheduler.notifySchedulerListenersSchduled(trigger);
+      quartzScheduler.notifySchedulerListenersScheduled(trigger);
     }
   }
 

@@ -1055,7 +1055,7 @@ public class JobStoreImpl
       OperableTrigger trigger = triggerEntity.getValue();
       JobKey jobKey = trigger.getJobKey();
       JobDetailEntity jobDetailEntity = jobDetailEntityAdapter.readByKey(db, jobKey);
-      if (jobDetailEntity != null && jobDetailEntity.getValue().isConcurrentExectionDisallowed()) {
+      if (jobDetailEntity != null && jobDetailEntity.getValue().isConcurrentExecutionDisallowed()) {
         if (jobsAcquired.contains(jobKey)) {
           // trigger for job disallowing concurrent execution already acquired
           triggerEntityIterator.remove();
@@ -1207,7 +1207,7 @@ public class JobStoreImpl
     JobDetail jobDetail = jobDetailEntity.getValue();
 
     // block triggers for job if concurrent execution is disallowed
-    if (jobDetail.isConcurrentExectionDisallowed()) {
+    if (jobDetail.isConcurrentExecutionDisallowed()) {
       blockTriggers(db, triggerKey, jobDetail);
     }
 
@@ -1284,7 +1284,7 @@ public class JobStoreImpl
       }
 
       // unblock triggers if concurrent execution is disallowed
-      if (jobDetail.isConcurrentExectionDisallowed()) {
+      if (jobDetail.isConcurrentExecutionDisallowed()) {
         unblockTriggers(db, jobDetail);
         signaler.signalSchedulingChange(0L);
       }

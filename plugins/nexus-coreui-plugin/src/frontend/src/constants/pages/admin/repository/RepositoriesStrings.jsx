@@ -53,7 +53,7 @@ export default {
         LOADING_ERROR: 'Loading Error',
         ANALYZE_THIS: (name) => `Analyze '${name}' repository`,
         ANALYZE_ALL: 'Analyze all repositories',
-        MODAL_CONTENT: (name) => `Do you want to analyze the repository ${name} and others for secuirty vulnerabilities and licence issues?`,
+        MODAL_CONTENT: (name) => `Do you want to analyze the repository ${name} and others for security vulnerabilities and licence issues?`,
         MODAL_HEADER: 'Analyze Repository',
         NOT_AVAILABLE_TOOLTIP_HC: 'Repository Health Check Unavailable',
         NOT_AVAILABLE_TOOLTIP_FS: 'Repository Firewall Status Unavailable',

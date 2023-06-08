@@ -57,7 +57,7 @@ public class ProxyHandler
       return buildNotFoundResponse(context);
     }
     catch (BypassHttpErrorException e) {
-      return buildHttpErrorResponce(e);
+      return buildHttpErrorResponse(e);
     }
     catch (ProxyServiceException e) {
       return HttpResponses.serviceUnavailable();
@@ -93,7 +93,7 @@ public class ProxyHandler
     return HttpResponses.notFound();
   }
 
-  protected Response buildHttpErrorResponce(final BypassHttpErrorException proxyErrorsException) {
+  protected Response buildHttpErrorResponse(final BypassHttpErrorException proxyErrorsException) {
     return new Response.Builder()
         .status(new Status(false, proxyErrorsException.getStatusCode(), proxyErrorsException.getReason()))
         .headers(new Headers(proxyErrorsException.getHeaders()))

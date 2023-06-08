@@ -148,7 +148,7 @@ public class MavenProxyFacet
       asset = findAsset(tx, bucket, path);
     }
     if (asset == null) {
-      log.debug("Attempting to set cache info for non-existent maven asset {}", path.getPath());
+      log.debug("Attempting to set cache info for nonexistent maven asset {}", path.getPath());
       return;
     }
 

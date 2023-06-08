@@ -19,7 +19,7 @@ import org.sonatype.nexus.repository.content.Component;
 import org.sonatype.nexus.repository.content.fluent.FluentComponent;
 
 /**
- * A format specifc evaluator to determine whether the component indicates a pre-release version.
+ * A format specific evaluator to determine whether the component indicates a pre-release version.
  * Implementations are format specific.
  *
  * Note: an implementor which is not concerned with a component's assets should override both methods which may avoid a

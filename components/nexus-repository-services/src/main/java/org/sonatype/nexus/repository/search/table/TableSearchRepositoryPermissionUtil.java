@@ -75,7 +75,7 @@ public class TableSearchRepositoryPermissionUtil
     applying the generated sql for cross repository/format content selectors privilege doesn't wrongly return results
     Therefore, for a given user a cross format or cross repository content selector will always be found for that user even if the
      search request specifies a repository that does not exist. Thus, since content selector expressions don't include repository
-     we additionally apply the reposistories specified in the search request to the content selector.
+     we additionally apply the repositories specified in the search request to the content selector.
     */
     for (String repository : repositories) {
       if (!repositoryManager.exists(repository) ||

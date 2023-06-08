@@ -17,7 +17,7 @@ import org.sonatype.nexus.repository.search.ComponentSearchResult;
 import org.elasticsearch.search.SearchHit;
 
 /**
- * Extension point for search based on ElasticSearchs
+ * Extension point for search based on ElasticSearches
  *
  * @since 3.38
  */

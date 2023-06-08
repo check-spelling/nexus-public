@@ -16,7 +16,7 @@
  */
 import GenericStorageConfiguration from './facets/GenericStorageConfiguration';
 import RewritePackageUrlsConfiguration from './facets/RewritePackageUrlsConfiguration';
-import ContentDespositionConfiguration from './facets/ContentDespositionConfiguration';
+import ContentDispositionConfiguration from './facets/ContentDispositionConfiguration';
 import GenericProxyConfiguration from './facets/GenericProxyConfiguration';
 import GenericGroupConfiguration from './facets/GenericGroupConfiguration';
 import GenericOptionsConfiguration from './facets/GenericOptionsConfiguration';
@@ -141,7 +141,7 @@ const repositoryFormats = {
     })
   },
   raw_proxy: {
-    facets: [replicationFacet, ContentDespositionConfiguration, ...genericFacets.proxy],
+    facets: [replicationFacet, ContentDispositionConfiguration, ...genericFacets.proxy],
     defaultValues: {
       ...genericDefaultValues.proxy,
       ...replicationDefaultValue,
@@ -152,7 +152,7 @@ const repositoryFormats = {
     })
   },
   raw_hosted: {
-    facets: [replicationFacet, ContentDespositionConfiguration, ...genericFacets.hosted],
+    facets: [replicationFacet, ContentDispositionConfiguration, ...genericFacets.hosted],
     defaultValues: {
       ...mergeDeepRight(genericDefaultValues.hosted, {
         storage: {strictContentTypeValidation: false}
@@ -165,7 +165,7 @@ const repositoryFormats = {
     })
   },
   raw_group: {
-    facets: [replicationFacet, ContentDespositionConfiguration, ...genericFacets.group],
+    facets: [replicationFacet, ContentDispositionConfiguration, ...genericFacets.group],
     defaultValues: {
       ...genericDefaultValues.group,
       ...replicationDefaultValue,
@@ -180,7 +180,7 @@ const repositoryFormats = {
       replicationFacet,
       VersionPolicyConfiguration,
       LayoutPolicyConfiguration,
-      ContentDespositionConfiguration,
+      ContentDispositionConfiguration,
       GenericStorageConfiguration,
       GenericProxyConfiguration,
       GenericOptionsConfiguration,
@@ -211,7 +211,7 @@ const repositoryFormats = {
       replicationFacet,
       VersionPolicyConfiguration,
       LayoutPolicyConfiguration,
-      ContentDespositionConfiguration,
+      ContentDispositionConfiguration,
       ...genericFacets.hosted
     ],
     defaultValues: {
@@ -232,7 +232,7 @@ const repositoryFormats = {
       replicationFacet,
       VersionPolicyConfiguration,
       LayoutPolicyConfiguration,
-      ContentDespositionConfiguration,
+      ContentDispositionConfiguration,
       ...genericFacets.group
     ],
     defaultValues: {

@@ -79,7 +79,7 @@ public abstract class MockUserManagerSupport
   }
 
   public Set<User> searchUsers(UserSearchCriteria criteria) {
-    return this.filterListInMemeory(this.getUsers(), criteria);
+    return this.filterListInMemory(this.getUsers(), criteria);
   }
 
   protected Set<User> getUsers() {

@@ -167,7 +167,7 @@ describe('PrivilegesDetails', function() {
     expect(screen.getByRole('alert')).toHaveTextContent(message);
   });
 
-  it('renders all required fields for for types', async function() {
+  it('renders all required fields for types', async function() {
     const {type, name, description} = selectors;
 
     await renderAndWaitForLoad();

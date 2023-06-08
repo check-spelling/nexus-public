@@ -53,7 +53,7 @@ public abstract class ParallelRequester
   /**
    * @param chunkSize       - the number of bytes to be processed in one parallel request
    * @param numberOfThreads - a non-negative integer, either 0 to indicate that number of threads should be dynamically
-   *                        selected based on the env, or a postive int to set a fixed number of threads
+   *                        selected based on the env, or a positive int to set a fixed number of threads
    * @param threadGroupName - a human readable name for the threads
    */
   public ParallelRequester(final int chunkSize, final int numberOfThreads, final String threadGroupName)

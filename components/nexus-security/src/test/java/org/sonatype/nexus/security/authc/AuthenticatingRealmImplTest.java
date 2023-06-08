@@ -75,21 +75,21 @@ public class AuthenticatingRealmImplTest
   }
 
   @Test
-  public void testCreateWithPassowrd() throws Exception {
+  public void testCreateWithPassword() throws Exception {
     buildTestAuthenticationConfig(CUser.STATUS_ACTIVE);
 
     String clearPassword = "default-password";
-    String username = "testCreateWithPassowrdEmailUserId";
+    String username = "testCreateWithPasswordEmailUserId";
 
-    CUser user = user("testCreateWithPassowrdEmail@somewhere", "testCreateWithPassowrdEmail",
-        "testCreateWithPassowrdEmail", CUser.STATUS_ACTIVE, username, null);
+    CUser user = user("testCreateWithPasswordEmail@somewhere", "testCreateWithPasswordEmail",
+        "testCreateWithPasswordEmail", CUser.STATUS_ACTIVE, username, null);
 
     Set<String> roles = new HashSet<String>();
     roles.add("role");
 
     configurationManager.createUser(user, clearPassword, roles);
 
-    UsernamePasswordToken upToken = new UsernamePasswordToken("testCreateWithPassowrdEmailUserId", clearPassword);
+    UsernamePasswordToken upToken = new UsernamePasswordToken("testCreateWithPasswordEmailUserId", clearPassword);
     AuthenticationInfo ai = realm.getAuthenticationInfo(upToken);
     String password = new String((char[]) ai.getCredentials());
 
@@ -143,7 +143,7 @@ public class AuthenticatingRealmImplTest
   @Test
   public void testNoneExistentUser() throws Exception {
     buildTestAuthenticationConfig(CUser.STATUS_ACTIVE);
-    UsernamePasswordToken upToken = new UsernamePasswordToken("non-existent-user", "password");
+    UsernamePasswordToken upToken = new UsernamePasswordToken("nonexistent-user", "password");
 
     thrown.expect(UnknownAccountException.class);
     realm.getAuthenticationInfo(upToken);

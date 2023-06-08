@@ -1381,7 +1381,7 @@
     </profile>
 
     <!--
-    This is to be used when running the nexuspro-performance-testsuite, adding the External referrence
+    This is to be used when running the nexuspro-performance-testsuite, adding the External reference
     was just to override excludedGroups with something valid but not used.
     The performance tests should be invoked on the nexuspro-performance-testsuite module directly and not
     the whole testsuite

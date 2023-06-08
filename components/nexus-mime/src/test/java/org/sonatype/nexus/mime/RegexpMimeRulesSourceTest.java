@@ -30,7 +30,7 @@ public class RegexpMimeRulesSourceTest
     extends TestSupport
 {
   @Test
-  public void testRegectMimeRulesSourceTest() {
+  public void testRegexpMimeRulesSourceTest() {
     final RegexpMimeRulesSource underTest = new RegexpMimeRulesSource();
 
     underTest.addRule(".*\\.foo\\z", "foo/bar");

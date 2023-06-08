@@ -33,7 +33,7 @@ import static org.sonatype.nexus.testsuite.testsupport.system.RestTestHelper.ass
 import static org.sonatype.nexus.testsuite.testsupport.system.RestTestHelper.hasStatus;
 
 /**
- * Factory for {@link ApiVerifier} which assists with testing REST endpoitns
+ * Factory for {@link ApiVerifier} which assists with testing REST endpoints
  * @since 3.31
  */
 @Named

@@ -71,7 +71,7 @@ public class TimeZoneUtilsTests
   }
 
   @Test
-  public void dayOffTheMonthIsSheftedUp_ifServerFutureAndClientPast() {
+  public void dayOffTheMonthIsShiftedUp_ifServerFutureAndClientPast() {
     LocalDateTime clientDate = LocalDateTime.of(2019, 7, 20, 0, 0);
     LocalDateTime serverDate = LocalDateTime.of(2019, 7, 21, 0, 0);
     final int result = TimeZoneUtils.shiftMonthDay(20, clientDate, serverDate);
@@ -79,7 +79,7 @@ public class TimeZoneUtilsTests
   }
 
   @Test
-  public void dayOffTheMonthIsSheftedUp_ifServerPastAndClientFuture() {
+  public void dayOffTheMonthIsShiftedUp_ifServerPastAndClientFuture() {
     LocalDateTime clientDate = LocalDateTime.of(2019, 7, 21, 0, 0);
     LocalDateTime serverDate = LocalDateTime.of(2019, 7, 20, 0, 0);
     final int result = TimeZoneUtils.shiftMonthDay(21, clientDate, serverDate);
@@ -87,7 +87,7 @@ public class TimeZoneUtilsTests
   }
 
   @Test
-  public void dayOffTheMonthIsSheftedUp_ifServerFutureMonthAndClientPastMonth() {
+  public void dayOffTheMonthIsShiftedUp_ifServerFutureMonthAndClientPastMonth() {
     LocalDateTime clientDate = LocalDateTime.of(2019, 7, 31, 0, 0);
     LocalDateTime serverDate = LocalDateTime.of(2019, 8, 1, 0, 0);
     final int result = TimeZoneUtils.shiftMonthDay(31, clientDate, serverDate);
@@ -95,7 +95,7 @@ public class TimeZoneUtilsTests
   }
 
   @Test
-  public void dayOffTheMonthIsSheftedUp_ifServerPastMonthAndClientFutureMonth() {
+  public void dayOffTheMonthIsShiftedUp_ifServerPastMonthAndClientFutureMonth() {
     LocalDateTime clientDate = LocalDateTime.of(2019, 8, 1, 0, 0);
     LocalDateTime serverDate = LocalDateTime.of(2019, 7, 31, 0, 0);
     final int result = TimeZoneUtils.shiftMonthDay(1, clientDate, serverDate);

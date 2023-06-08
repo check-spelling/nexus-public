@@ -20,7 +20,7 @@ import com.orientechnologies.orient.jdbc.OrientJdbcConnection;
 import org.quartz.utils.ConnectionProvider;
 
 /**
- * An OrientDB specific {@link ConnectionProvider} provider implemenation.
+ * An OrientDB specific {@link ConnectionProvider} provider implementation.
  *
  * This class will typically be used via the Quartz {@code org.quartz.jobStore.driverDelegateClass}
  * configuration property.

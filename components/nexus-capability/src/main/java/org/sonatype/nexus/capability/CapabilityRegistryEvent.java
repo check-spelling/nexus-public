@@ -31,7 +31,7 @@ public class CapabilityRegistryEvent
   }
 
   /**
-   * Event fired after capabilities were loaded loaded from persistence store.
+   * Event fired after capabilities were loaded from persistence store.
    *
    * @since capabilities 2.0
    */

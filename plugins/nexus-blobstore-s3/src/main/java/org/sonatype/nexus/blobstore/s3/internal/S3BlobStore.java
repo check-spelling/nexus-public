@@ -438,7 +438,7 @@ public class S3BlobStore
         S3BlobAttributes blobAttributes = new S3BlobAttributes(s3, getConfiguredBucket(), attributePath(blobId));
         boolean loaded = blobAttributes.load();
         if (!loaded) {
-          log.warn("Attempt to access non-existent blob {} ({})", blobId, blobAttributes);
+          log.warn("Attempt to access nonexistent blob {} ({})", blobId, blobAttributes);
           return null;
         }
 
@@ -494,7 +494,7 @@ public class S3BlobStore
       if (!loaded) {
         // This could happen under some concurrent situations (two threads try to delete the same blob)
         // but it can also occur if the deleted index refers to a manually-deleted blob.
-        log.warn("Attempt to mark-for-delete non-existent blob {}", blobId);
+        log.warn("Attempt to mark-for-delete nonexistent blob {}", blobId);
         return false;
       }
       else if (blobAttributes.isDeleted()) {

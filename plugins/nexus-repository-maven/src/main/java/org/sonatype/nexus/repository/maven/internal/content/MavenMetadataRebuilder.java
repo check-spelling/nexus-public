@@ -522,8 +522,8 @@ public class MavenMetadataRebuilder
 
       log.debug("Verifying checksum for repository {} path {}", repository.getName(), asset.path());
       try {
-        Optional<AssetBlob> assestBlob = asset.blob();
-        Function<HashType, Optional<HashCode>> accessor = (hashType) -> getChecksum(assestBlob, hashType);
+        Optional<AssetBlob> assetsBlob = asset.blob();
+        Function<HashType, Optional<HashCode>> accessor = (hashType) -> getChecksum(assetsBlob, hashType);
 
         boolean sha1ChecksumWasRebuilt = mayUpdateChecksum(accessor, mavenPath, HashType.SHA1);
         if (sha1ChecksumWasRebuilt) {
@@ -540,7 +540,7 @@ public class MavenMetadataRebuilder
     }
 
     /*
-     * Verifies and may fix/create the broken/non-existent Maven hashes (.sha1/.md5 files).
+     * Verifies and may fix/create the broken/nonexistent Maven hashes (.sha1/.md5 files).
      * @return true if the checksum was rebuilt
      */
     private boolean mayUpdateChecksum(

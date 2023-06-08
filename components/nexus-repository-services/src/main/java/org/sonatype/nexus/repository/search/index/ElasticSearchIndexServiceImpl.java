@@ -573,7 +573,7 @@ public class ElasticSearchIndexServiceImpl
   }
 
   /**
-   * Returns the indixes admin client.
+   * Returns the indices admin client.
    */
   private IndicesAdminClient indicesAdminClient() {
     return client.get().admin().indices();

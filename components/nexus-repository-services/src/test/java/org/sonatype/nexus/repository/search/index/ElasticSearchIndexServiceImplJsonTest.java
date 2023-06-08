@@ -60,7 +60,7 @@ public class ElasticSearchIndexServiceImplJsonTest {
         + "}";
 
     String newJson = ElasticSearchIndexServiceImpl.filterConanAssetAttributes(json);
-    String exspected = "{\n"
+    String expected = "{\n"
         + "  \"assets\": [\n"
         + "    {\n"
         + "      \"content_type\": \"text/plain\",\n"
@@ -87,7 +87,7 @@ public class ElasticSearchIndexServiceImplJsonTest {
         + "  \"tags\": []\n"
         + "}";
     ObjectMapper mapper = new ObjectMapper();
-    assertEquals(mapper.readTree(exspected), mapper.readTree(newJson));
+    assertEquals(mapper.readTree(expected), mapper.readTree(newJson));
   }
 
 
@@ -110,7 +110,7 @@ public class ElasticSearchIndexServiceImplJsonTest {
   }
 
   @Test
-  public void testRemoveAttributesNotConen() throws JsonProcessingException {
+  public void testRemoveAttributesNotConan() throws JsonProcessingException {
     String json = "{\n"
         + "  \"assets\": [\n"
         + "    {\n"

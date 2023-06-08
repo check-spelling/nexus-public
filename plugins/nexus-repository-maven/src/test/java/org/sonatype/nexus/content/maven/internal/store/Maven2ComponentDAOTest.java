@@ -87,12 +87,12 @@ public class Maven2ComponentDAOTest
   }
 
   @Test
-  public void findGavsWithSnaphots() {
+  public void findGavsWithSnapshots() {
     try (DataSession<?> session = sessionRule.openSession(DEFAULT_DATASTORE_NAME)) {
       Maven2ComponentDAO dao = session.access(Maven2ComponentDAO.class);
-      Set<GAV> gavsWithSnaphots = dao.findGavsWithSnaphots(repositoryId, 2);
-      assertThat(gavsWithSnaphots.size(), is(1));
-      GAV gav = gavsWithSnaphots.stream().findFirst().get();
+      Set<GAV> gavsWithSnapshots = dao.findGavsWithSnapshots(repositoryId, 2);
+      assertThat(gavsWithSnapshots.size(), is(1));
+      GAV gav = gavsWithSnapshots.stream().findFirst().get();
       assertThat(gav.group, is("group"));
       assertThat(gav.name, is("artifact"));
       assertThat(gav.baseVersion, is("1.0.0-SNAPSHOT"));
@@ -100,12 +100,12 @@ public class Maven2ComponentDAOTest
   }
 
   @Test
-  public void findGavsWithSnaphotsLessMinimum() {
+  public void findGavsWithSnapshotsLessMinimum() {
     try (DataSession<?> session = sessionRule.openSession(DEFAULT_DATASTORE_NAME)) {
       Maven2ComponentDAO dao = session.access(Maven2ComponentDAO.class);
 
-      Set<GAV> gavsWithSnaphots = dao.findGavsWithSnaphots(repositoryId, 3);
-      assertThat(gavsWithSnaphots.size(), is(0));
+      Set<GAV> gavsWithSnapshots = dao.findGavsWithSnapshots(repositoryId, 3);
+      assertThat(gavsWithSnapshots.size(), is(0));
     }
   }
 

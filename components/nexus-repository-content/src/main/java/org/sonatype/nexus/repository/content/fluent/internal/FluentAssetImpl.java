@@ -179,7 +179,7 @@ public class FluentAssetImpl
     Content content = new Content(new BlobPayload(blob, assetBlob.contentType()));
     AttributesMap contentAttributes = content.getAttributes();
 
-    // attach asset so downstream format handlers can retrieve it if neccessary
+    // attach asset so downstream format handlers can retrieve it if necessary
     contentAttributes.set(Asset.class, this);
 
     if (attributes().contains(CACHE)) {

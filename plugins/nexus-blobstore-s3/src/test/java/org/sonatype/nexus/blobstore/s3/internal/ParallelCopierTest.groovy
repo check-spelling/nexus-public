@@ -63,7 +63,7 @@ class ParallelCopierTest
       0 * s3.abortMultipartUpload(_)
   }
 
-  def 'copy aborts multipart copys on error'() {
+  def 'copy aborts multipart copies on error'() {
     given: 'A parallel multipart copier'
       ParallelCopier copier = new ParallelCopier(100, 4)
       AmazonS3 s3 = Mock()
@@ -95,7 +95,7 @@ class ParallelCopierTest
       0 * s3.abortMultipartUpload(_)
   }
 
-  def 'copy uses copyObject for small copys'() {
+  def 'copy uses copyObject for small copies'() {
     given: 'A parallel multipart copier'
       ParallelCopier copier = new ParallelCopier(100, 4)
       AmazonS3 s3 = Mock()

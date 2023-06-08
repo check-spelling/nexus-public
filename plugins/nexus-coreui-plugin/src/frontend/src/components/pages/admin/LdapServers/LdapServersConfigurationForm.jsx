@@ -45,7 +45,7 @@ import UIStrings from '../../../../constants/UIStrings';
 import {
   isSimpleAuth,
   isDigestAuth,
-  isCramtAuth,
+  isCramAuth,
   isAnonymousAuth,
   validateUrlValues,
   generateUrl,
@@ -68,7 +68,7 @@ export default forwardRef(({actor, onDone}, ref) => {
   } = state.context;
   const isProtocolSelected = ValidationUtils.notBlank(protocol);
   const isAuthMethodSelected = ValidationUtils.notBlank(authScheme);
-  const showRealmAuth = isDigestAuth(authScheme) || isCramtAuth(authScheme);
+  const showRealmAuth = isDigestAuth(authScheme) || isCramAuth(authScheme);
   const showAuth = showRealmAuth || isSimpleAuth(authScheme);
   const isInvalid = FormUtils.isInvalid(validationErrors);
   const canVerify = !isInvalid;

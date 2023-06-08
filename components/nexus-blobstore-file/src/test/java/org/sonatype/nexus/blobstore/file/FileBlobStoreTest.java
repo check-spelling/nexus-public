@@ -486,7 +486,7 @@ public class FileBlobStoreTest
 
   @Test
   public void getBlobAttributesReturnsNullWhenPropertiesFileIsNonExistent() {
-    assertNull(underTest.getBlobAttributes(new BlobId("non-existent-blob")));
+    assertNull(underTest.getBlobAttributes(new BlobId("nonexistent-blob")));
   }
 
   @Test

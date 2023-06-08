@@ -30,7 +30,7 @@ public class ValidationErrorXO
   public static final String GENERIC = "*";
 
   /**
-   * Identifies the value value that is failing validation. A value of "*" denotes that validation
+   * Identifies the value that is failing validation. A value of "*" denotes that validation
    * does not applies to a specific value.
    *
    * E.g. "name".

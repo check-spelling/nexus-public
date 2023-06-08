@@ -103,9 +103,9 @@ public class AuthorizingRealmImpl
     // if the user belongs to this realm, we are most likely using this realm stand alone, or for testing
     if (!realmNames.contains(this.getName())) {
       // make sure the realm is enabled
-      Collection<Realm> configureadRealms = realmSecurityManager.getRealms();
+      Collection<Realm> configuredRealms = realmSecurityManager.getRealms();
       boolean foundRealm = false;
-      for (Realm realm : configureadRealms) {
+      for (Realm realm : configuredRealms) {
         if (realmNames.contains(realm.getName())) {
           foundRealm = true;
           break;
@@ -150,7 +150,7 @@ public class AuthorizingRealmImpl
     // user not managed by this Realm
     {
       throw new AuthorizationException("User for principals: " + principals.getPrimaryPrincipal()
-          + " not manged by Nexus realm.");
+          + " not managed by Nexus realm.");
     }
 
     return new SimpleAuthorizationInfo(roles);

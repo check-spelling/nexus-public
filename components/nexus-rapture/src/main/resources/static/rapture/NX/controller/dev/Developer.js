@@ -126,7 +126,7 @@ Ext.define('NX.controller.dev.Developer', {
   },
 
   /**
-   * Maximimze developer panel.
+   * Maximize developer panel.
    *
    * @private
    */

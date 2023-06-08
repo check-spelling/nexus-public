@@ -23,7 +23,7 @@ import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 
 /**
- * Repository / Cleanup Util that provide utilities for the the cleanup attributes.
+ * Repository / Cleanup Util that provide utilities for the cleanup attributes.
  *
  * @since 3.19
  */

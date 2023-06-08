@@ -96,7 +96,7 @@ public class BlobStoreQuotaServiceImplTest
 
   @Test
   public void missingQuota() {
-    when(attributes.get(BlobStoreQuotaSupport.TYPE_KEY, String.class)).thenReturn("non-existent");
+    when(attributes.get(BlobStoreQuotaSupport.TYPE_KEY, String.class)).thenReturn("nonexistent");
     assertThat(service.checkQuota(blobStore), nullValue());
   }
 

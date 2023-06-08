@@ -28,7 +28,7 @@
     WHERE<include refid="componentCoordinateMatch"/>;
   </update>
 
-  <select id="findGavsWithSnaphots" resultType="org.sonatype.nexus.content.maven.store.GAV">
+  <select id="findGavsWithSnapshots" resultType="org.sonatype.nexus.content.maven.store.GAV">
     SELECT namespace as "group", name, base_version, COUNT(*) AS count FROM maven2_component
     WHERE repository_id = #{repositoryId} AND base_version LIKE '%-SNAPSHOT'
     GROUP BY namespace, name, base_version

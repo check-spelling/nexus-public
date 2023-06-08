@@ -55,7 +55,7 @@ public class FreezeResource
 
   private static final String ENABLE_READONLY_FAILED_MESSAGE = "Attempt to enable read-only failed";
 
-  private static final String RELESE_READONLY_FAILED_MESSAGE = "Attempt to release read-only failed";
+  private static final String RELEASE_READONLY_FAILED_MESSAGE = "Attempt to release read-only failed";
 
   private static final String FORCE_RELEASE_READONLY_FAILED_MESSAGE = "Attempt to force release read-only failed";
 
@@ -105,8 +105,8 @@ public class FreezeResource
       freezeService.cancelFreeze();
     }
     catch (Exception e) {
-      log.warn(RELESE_READONLY_FAILED_MESSAGE, e);
-      throw new WebApplicationException(RELESE_READONLY_FAILED_MESSAGE, 404);
+      log.warn(RELEASE_READONLY_FAILED_MESSAGE, e);
+      throw new WebApplicationException(RELEASE_READONLY_FAILED_MESSAGE, 404);
     }
   }
 

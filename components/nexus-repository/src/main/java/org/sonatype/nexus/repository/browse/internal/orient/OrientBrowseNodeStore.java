@@ -419,8 +419,8 @@ public class OrientBrowseNodeStore
       if (candidate != null) {
         // we just fetched the asset so we know its bucketId will have a DB record attached
         ODocument bucketRecord = ((AttachedEntityId) candidate.bucketId()).getIdentity().getRecord();
-        String asssetBucketRepositoryName = bucketRecord.field(BucketEntityAdapter.P_REPOSITORY_NAME);
-        if (members.stream().anyMatch(repo -> repo.getName().equals(asssetBucketRepositoryName))) {
+        String assetBucketRepositoryName = bucketRecord.field(BucketEntityAdapter.P_REPOSITORY_NAME);
+        if (members.stream().anyMatch(repo -> repo.getName().equals(assetBucketRepositoryName))) {
           return candidate;
         }
       }

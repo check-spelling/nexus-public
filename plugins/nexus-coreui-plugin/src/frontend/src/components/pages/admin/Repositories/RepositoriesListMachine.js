@@ -66,10 +66,10 @@ export default ListMachineUtils.buildListMachine({
         },
         loaded: {
           on: {
-            ENABLE_HELTH_CHECK_SINGLE_REPO: {
+            ENABLE_HEALTH_CHECK_SINGLE_REPO: {
               target: 'enablingHealthCheckSingleRepo'
             },
-            ENABLE_HELTH_CHECK_ALL_REPOS: {
+            ENABLE_HEALTH_CHECK_ALL_REPOS: {
               target: 'enablingHealthCheckAllRepos'
             }
           }

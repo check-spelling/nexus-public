@@ -25,7 +25,7 @@ const contentDispositionOptions = [
   {key: 'Attachment', value: 'ATTACHMENT'}
 ];
 
-export default function ContentDespositionConfiguration({parentMachine}) {
+export default function ContentDispositionConfiguration({parentMachine}) {
   const [currentParent, sendParent] = parentMachine;
 
   let {format} = currentParent.context.data;

@@ -316,7 +316,7 @@ public class KeyStoreManagerImpl
       List<Certificate> certificates = Lists.newArrayListWithCapacity(aliases.length);
       for (String alias : aliases) {
         Certificate cert = trustedKeyStore.getCertificate(alias);
-        // FIXME: Work around some strange case not clear why, but alias is reported for non-existent/removed certs
+        // FIXME: Work around some strange case not clear why, but alias is reported for nonexistent/removed certs
         if (cert == null) {
           log.warn("Trust-store reports it contains certificate for alias '{}' but certificate is null", alias);
           continue;

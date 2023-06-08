@@ -236,7 +236,7 @@ public class SelectorManagerImplTest
     SelectorConfiguration selector = createSelectorConfiguration("role", "privilege", "selector", "repository");
 
     expectedException.expect(IllegalStateException.class);
-    expectedException.expectMessage("Content selector selector is in use and cannot be deleted");
+    expectedException.expectMessage("Content selector is in use and cannot be deleted");
 
     manager.delete(selector);
 

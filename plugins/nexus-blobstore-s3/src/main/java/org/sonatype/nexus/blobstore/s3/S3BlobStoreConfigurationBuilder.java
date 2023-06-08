@@ -92,14 +92,14 @@ public class S3BlobStoreConfigurationBuilder
   }
 
   /**
-   * Set the the number of days before deleted blobs are automatically removed. Use -1 to disable automatic clean-up.
+   * Set the number of days before deleted blobs are automatically removed. Use -1 to disable automatic clean-up.
    */
   public S3BlobStoreConfigurationBuilder expiration(final String expiration) {
     return expiration(Integer.valueOf(checkNotNull(expiration, "Missing expiration")));
   }
 
   /**
-   * Set the the number of days before deleted blobs are automatically removed. Use -1 to disable automatic clean-up.
+   * Set the number of days before deleted blobs are automatically removed. Use -1 to disable automatic clean-up.
    */
   public S3BlobStoreConfigurationBuilder expiration(final Integer expiration) {
     this.expiration = checkNotNull(expiration, "Missing expiration").toString();
@@ -155,7 +155,7 @@ public class S3BlobStoreConfigurationBuilder
   }
 
   /**
-   * Set the endpoint for S3. This overrides the the S3 URL.
+   * Set the endpoint for S3. This overrides the S3 URL.
    */
   public S3BlobStoreConfigurationBuilder endpoint(@Nullable final String endpoint) {
     this.endpoint = Optional.ofNullable(endpoint);

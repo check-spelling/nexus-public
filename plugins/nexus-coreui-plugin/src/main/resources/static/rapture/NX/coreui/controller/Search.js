@@ -756,7 +756,7 @@ Ext.define('NX.coreui.controller.Search', {
     var filterArray = [],
         firstSegment, segments;
 
-    // Remove any pre-existing query string
+    // Remove any preexisting query string
     firstSegment = NX.Bookmarks.getBookmark().getSegment(0);
     if (firstSegment.indexOf('=') !== -1) {
       firstSegment = firstSegment.slice(0, firstSegment.indexOf('='));

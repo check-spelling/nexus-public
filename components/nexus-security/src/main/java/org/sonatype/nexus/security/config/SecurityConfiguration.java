@@ -53,7 +53,7 @@ public interface SecurityConfiguration
   void addUser(CUser user, Set<String> roles);
 
   /**
-   * Adds role mapping for a user idetified by the id given, and for the given source.
+   * Adds role mapping for a user identified by the id given, and for the given source.
    * @since 3.22
    */
   void addRoleMapping(String userId, Set<String> roles, String source);

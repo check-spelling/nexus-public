@@ -75,7 +75,7 @@ export default {
     FORM: {
       CREATE_TITLE: 'Create Blob Store',
       EDIT_WARNING: '\
-        Updating the blob store configuration will cause it to be temporarily unavailble for a short period of time. \
+        Updating the blob store configuration will cause it to be temporarily unavailable for a short period of time. \
         Edits to configuration may also leave the blob store in a non-functional state. \
         Use caution when changing values.\
       ',

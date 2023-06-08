@@ -371,7 +371,7 @@
      *          "css": "${app.output.resources}/${app.name}-all.css",
      *          "js": {
      *              "path": "app.js",
-     *              // This setting constrols the output language level.  Set to 'ES6' to 
+     *              // This setting controls the output language level.  Set to 'ES6' to 
      *              // disable the transpiler
      *              "version": "ES5"
      *          },
@@ -504,7 +504,7 @@
      */
 
     /**
-     * File / directory name patttern to ignore when copying to the builds. Must be a
+     * File / directory name pattern to ignore when copying to the builds. Must be a
      * valid regular expression.
      */
     "ignore": [
