@@ -291,16 +291,16 @@ public class AuthorizationManagerTest
 
     authzManager.updatePrivilegeByName(privilege);
 
-    CPrivilege persistenPrivilege = this.getConfigurationManager().readPrivilegeByName(privilege.getName());
+    CPrivilege persistentPrivilege = this.getConfigurationManager().readPrivilegeByName(privilege.getName());
 
-    Assert.assertEquals(privilege.getId(), persistenPrivilege.getId());
-    Assert.assertEquals(privilege.getName(), persistenPrivilege.getName());
-    Assert.assertEquals(privilege.getDescription(), persistenPrivilege.getDescription());
-    Assert.assertEquals(privilege.getType(), persistenPrivilege.getType());
+    Assert.assertEquals(privilege.getId(), persistentPrivilege.getId());
+    Assert.assertEquals(privilege.getName(), persistentPrivilege.getName());
+    Assert.assertEquals(privilege.getDescription(), persistentPrivilege.getDescription());
+    Assert.assertEquals(privilege.getType(), persistentPrivilege.getType());
 
-    Assert.assertEquals("read", persistenPrivilege.getProperty("method"));
-    Assert.assertEquals("/some/path/", persistenPrivilege.getProperty("permission"));
-    Assert.assertEquals(2, persistenPrivilege.getProperties().size());
+    Assert.assertEquals("read", persistentPrivilege.getProperty("method"));
+    Assert.assertEquals("/some/path/", persistentPrivilege.getProperty("permission"));
+    Assert.assertEquals(2, persistentPrivilege.getProperties().size());
   }
 
   @Test
