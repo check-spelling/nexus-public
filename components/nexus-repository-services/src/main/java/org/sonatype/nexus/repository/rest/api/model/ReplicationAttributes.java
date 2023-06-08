@@ -27,7 +27,7 @@ public class ReplicationAttributes
   @NotNull
   protected final Boolean preemptivePullEnabled;
 
-  @ApiModelProperty(value = "Regular Expression of Asset Paths to pull pre-emptively pull")
+  @ApiModelProperty(value = "Regular Expression of Asset Paths to pull preemptively pull")
   protected final String assetPathRegex;
 
 
