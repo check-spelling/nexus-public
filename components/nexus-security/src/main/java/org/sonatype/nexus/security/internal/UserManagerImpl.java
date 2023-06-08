@@ -220,7 +220,7 @@ public class UserManagerImpl
 
   @Override
   public User updateUser(final User user) throws UserNotFoundException {
-    // we need to pull the users password off off the old user object
+    // we need to pull the users password off the old user object
     CUser oldSecUser = configuration.readUser(user.getUserId());
     CUser newSecUser = toUser(user);
     newSecUser.setPassword(oldSecUser.getPassword());
