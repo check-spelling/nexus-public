@@ -917,7 +917,7 @@ public class FileBlobStore
 
     //rather than using the blobId stream here, need to use a different means of walking the file tree, as
     //we are deleting items on the way through, and apparently on *nix systems, deleting files that you are about to
-    //walk over causes a FileNotFoundException to be thrown and the walking stops.  Overridding the visitFileFailed
+    //walk over causes a FileNotFoundException to be thrown and the walking stops.  Overriding the visitFileFailed
     //method allows us to get past that
     Files.walkFileTree(contentDir, EnumSet.of(FOLLOW_LINKS), Integer.MAX_VALUE, new SimpleFileVisitor<Path>(){
       @Override
