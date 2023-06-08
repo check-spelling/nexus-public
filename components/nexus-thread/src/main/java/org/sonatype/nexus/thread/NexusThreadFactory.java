@@ -29,7 +29,7 @@ public class NexusThreadFactory
 
   private final ThreadGroup schedulerThreadGroup;
 
-  private final boolean deamonThread;
+  private final boolean daemonThread;
 
   private int threadPriority;
 
@@ -49,13 +49,13 @@ public class NexusThreadFactory
     int poolNum = poolNumber.getAndIncrement();
     this.schedulerThreadGroup = new ThreadGroup(threadGroupName + " #" + poolNum);
     this.namePrefix = poolId + "-" + poolNum + "-thread-";
-    this.deamonThread = daemonThread;
+    this.daemonThread = daemonThread;
     this.threadPriority = threadPriority;
   }
 
   public Thread newThread(final Runnable r) {
     final Thread result = new Thread(schedulerThreadGroup, r, namePrefix + threadNumber.getAndIncrement());
-    result.setDaemon(this.deamonThread);
+    result.setDaemon(this.daemonThread);
     result.setPriority(this.threadPriority);
     return result;
   }
