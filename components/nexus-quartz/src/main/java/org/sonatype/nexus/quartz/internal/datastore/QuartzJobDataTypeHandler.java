@@ -47,11 +47,11 @@ public class QuartzJobDataTypeHandler
       return new JobDataMap((Map<?, ?>) ois.readObject());
     }
     catch (IOException e) {
-      log.debug("An unepected error occurred", e);
+      log.debug("An unexpected error occurred", e);
       return null;
     }
     catch (ClassNotFoundException e) {
-      log.debug("An unepected error occurred", e);
+      log.debug("An unexpected error occurred", e);
       return null;
     }
   }
