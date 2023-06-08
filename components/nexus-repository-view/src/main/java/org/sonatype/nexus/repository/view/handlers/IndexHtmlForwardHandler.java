@@ -53,7 +53,7 @@ public class IndexHtmlForwardHandler
 
     for (String file : INDEX_FILES) {
       Response response = forward(context, path + file);
-      // return response if it was successful or an error which was not not found
+      // return response if it was successful or an error which was not found
       if (response.getStatus().isSuccessful() || response.getStatus().getCode() != HttpStatus.NOT_FOUND) {
         return response;
       }
