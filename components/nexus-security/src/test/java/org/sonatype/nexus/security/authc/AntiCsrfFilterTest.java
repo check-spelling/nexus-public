@@ -38,7 +38,7 @@ public class AntiCsrfFilterTest
   private AntiCsrfFilter underTest;
 
   @Mock
-  private AntiCsrfHelper antiCrsfHelper;
+  private AntiCsrfHelper antiCsrfHelper;
 
   @Mock
   private PrintWriter printWriter;
@@ -51,7 +51,7 @@ public class AntiCsrfFilterTest
 
   @Before
   public void setup() throws IOException {
-    underTest = new AntiCsrfFilter(antiCrsfHelper) {
+    underTest = new AntiCsrfFilter(antiCsrfHelper) {
       @Override
       protected Subject getSubject(final ServletRequest request, final ServletResponse response) {
         return null;
@@ -70,19 +70,19 @@ public class AntiCsrfFilterTest
 
   @Test
   public void testIsEnabled() {
-    when(antiCrsfHelper.isEnabled()).thenReturn(true);
+    when(antiCsrfHelper.isEnabled()).thenReturn(true);
     assertTrue(underTest.isEnabled());
 
-    when(antiCrsfHelper.isEnabled()).thenReturn(false);
+    when(antiCsrfHelper.isEnabled()).thenReturn(false);
     assertFalse(underTest.isEnabled());
   }
 
   @Test
   public void testIsAccessAllowed() {
-    when(antiCrsfHelper.isAccessAllowed(httpServletRequest)).thenReturn(true);
+    when(antiCsrfHelper.isAccessAllowed(httpServletRequest)).thenReturn(true);
     assertTrue(underTest.isAccessAllowed(httpServletRequest, httpServletResponse, null));
 
-    when(antiCrsfHelper.isAccessAllowed(httpServletRequest)).thenReturn(false);
+    when(antiCsrfHelper.isAccessAllowed(httpServletRequest)).thenReturn(false);
     assertFalse(underTest.isAccessAllowed(httpServletRequest, httpServletResponse, null));
   }
 }
