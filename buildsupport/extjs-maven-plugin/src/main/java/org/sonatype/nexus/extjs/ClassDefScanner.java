@@ -165,7 +165,7 @@ public class ClassDefScanner
     // display some debug information about the graph
     if (debug) {
       log.debug("Vertices:");
-      for (Vertex v : graph.getVerticies()) {
+      for (Vertex v : graph.getVertices()) {
         log.debug("  " + v.getLabel());
         if (!v.getParents().isEmpty()) {
           log.debug("    parents:");
