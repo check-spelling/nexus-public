@@ -261,7 +261,7 @@ Ext.define('NX.coreui.controller.Privileges', {
 
   /**
    * @private
-   * Creates a privlege.
+   * Creates a privilege.
    */
   createPrivilege: function(button) {
     var me = this,
