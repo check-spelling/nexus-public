@@ -200,7 +200,7 @@ public class GpgUtils
   /**
    * Get public key from the secret one.
    *
-   * @param secretKey the the GPG secret/private key.
+   * @param secretKey the GPG secret/private key.
    * @return the {@link PGPPublicKey} object.
    */
   public static PGPPublicKey getPublicKey(final String secretKey) throws IOException {

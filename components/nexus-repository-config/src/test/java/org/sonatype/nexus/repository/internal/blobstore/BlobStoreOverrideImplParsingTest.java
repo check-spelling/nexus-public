@@ -31,7 +31,7 @@ import static org.sonatype.nexus.repository.internal.blobstore.BlobStoreOverride
 
 /**
  * Test {@code BlobStoreOverrideImpl} with various override strings in a situation where only the default blob store
- * exists and the override string is not expected to trigger an update the the blob store configuration.
+ * exists and the override string is not expected to trigger an update the blob store configuration.
  */
 @RunWith(Parameterized.class)
 public class BlobStoreOverrideImplParsingTest
