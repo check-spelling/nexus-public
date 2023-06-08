@@ -107,7 +107,7 @@ export default function ContentSelectorsForm({itemId, onDone}) {
                   onChange={update}/>
             </NxFormGroup>
             <NxFormGroup label={UIStrings.CONTENT_SELECTORS.EXPRESSION_LABEL}
-                         sublable={UIStrings.CONTENT_SELECTORS.EXPRESSION_DESCRIPTION}
+                         sublabel={UIStrings.CONTENT_SELECTORS.EXPRESSION_DESCRIPTION}
                          isRequired>
               <Textarea
                   className="nx-text-input--long"
