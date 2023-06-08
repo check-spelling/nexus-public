@@ -198,7 +198,7 @@ public class OrientSecurityConfigurationSourceTest
   }
 
   @Test
-  public void testUpdateUserRoleMapping_shouldPersistAndPreventConccurentModification() throws Exception {
+  public void testUpdateUserRoleMapping_shouldPersistAndPreventConcurrentModification() throws Exception {
     CUserRoleMapping adminMapping = source.getConfiguration().getUserRoleMapping("admin", "default");
 
     assertThat(adminMapping.getRoles(), is(singleton("nx-admin")));
