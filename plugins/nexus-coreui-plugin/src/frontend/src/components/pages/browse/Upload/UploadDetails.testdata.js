@@ -97,7 +97,7 @@ const multiUploadDefinition = {
 
 const uiUploadDisabledUploadDefinition = {
   ...simpleUploadDefinition,
-  format: 'uiUploadDiabled',
+  format: 'uiUploadDisabled',
   uiUpload: false
 };
 
