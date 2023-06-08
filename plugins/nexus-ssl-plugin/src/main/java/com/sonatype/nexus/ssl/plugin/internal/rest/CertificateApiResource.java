@@ -164,7 +164,7 @@ public class CertificateApiResource
   @RequiresPermissions("nexus:ssl-truststore:delete")
   public void removeCertificate(@PathParam("id") final String id) {
     try {
-      // check that the certificate existss
+      // check that the certificate exists
       getTrustedCertificate(id);
 
       trustStore.removeTrustCertificate(id);
