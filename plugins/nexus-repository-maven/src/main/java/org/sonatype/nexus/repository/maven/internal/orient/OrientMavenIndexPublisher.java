@@ -280,10 +280,10 @@ public final class OrientMavenIndexPublisher extends MavenIndexPublisher
 
     private Path path;
 
-    private Maven2WritableResource(final MavenPath mavenPath, final OrientMavenFacet mavenFacet, final String contenType) {
+    private Maven2WritableResource(final MavenPath mavenPath, final OrientMavenFacet mavenFacet, final String contentType) {
       this.mavenPath = mavenPath;
       this.mavenFacet = mavenFacet;
-      this.contentType = contenType;
+      this.contentType = contentType;
       this.path = null;
     }
 
