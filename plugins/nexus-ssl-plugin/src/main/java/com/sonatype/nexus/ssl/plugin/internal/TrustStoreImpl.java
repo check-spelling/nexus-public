@@ -155,7 +155,7 @@ public class TrustStoreImpl
     SSLContext _sslcontext = this.sslcontext; // local variable allows concurrent removeTrustCertificate
     if (_sslcontext == null) {
       try {
-        // the trusted key store may have asychronously changed when NXRM is clustered, reload the managed store used
+        // the trusted key store may have asynchronously changed when NXRM is clustered, reload the managed store used
         // for fallback so the context doesn't use stale key store
         this.managedTrustManager = getManagedTrustManager(keyStoreManager);
         _sslcontext = SSLContext.getInstance(SSLConnectionSocketFactory.TLS);
