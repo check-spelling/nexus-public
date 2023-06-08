@@ -80,7 +80,7 @@ export const isDigestAuth = (authScheme) => {
   return digestAuth === authScheme;
 };
 
-export const isCramtAuth = (authScheme) => {
+export const isCramAuth = (authScheme) => {
   const cramAuth = FORM.AUTHENTICATION.OPTIONS.cram.id;
   return cramAuth === authScheme;
 };
