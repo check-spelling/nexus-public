@@ -141,7 +141,7 @@ public interface FluentAsset
    /**
    * Generally it is recommended that this method not be called and let stores manage this value automatically.
    *
-   * Sets the IP addres of user who uploaded the asset.
+   * Sets the IP address of user who uploaded the asset.
    */
   void createdByIP(String createdByIP);
 }
