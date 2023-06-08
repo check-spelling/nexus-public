@@ -39,7 +39,7 @@ public class PurgeUnusedFacetImpl
   @Override
   @Guarded(by = STARTED)
   public void purgeUnused(final int numberOfDays) {
-    checkArgument(numberOfDays > 0, "Number of days must be greater then zero");
+    checkArgument(numberOfDays > 0, "Number of days must be greater than zero");
     log.info("Purging unused components from repository {}", getRepository().getName());
 
     ContentFacetSupport contentFacet = (ContentFacetSupport) getRepository().facet(ContentFacet.class);
