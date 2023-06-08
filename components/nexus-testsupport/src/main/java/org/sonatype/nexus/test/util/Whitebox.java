@@ -22,7 +22,7 @@ public final class Whitebox
   }
 
   /**
-   * Uses reflection to set an intenal value.
+   * Uses reflection to set an internal value.
    */
   public static void setInternalState(final Object object, final String fieldName, final Object value) {
     try {
