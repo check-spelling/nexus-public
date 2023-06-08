@@ -34,9 +34,9 @@ export default function AnalyzeConfirmationModal({close, name}) {
   const enableHealthCheck = (name) => {
     close();
     if (name) {
-      send({type: 'ENABLE_HELTH_CHECK_SINGLE_REPO', repoName: name});
+      send({type: 'ENABLE_HEALTH_CHECK_SINGLE_REPO', repoName: name});
     } else {
-      send({type: 'ENABLE_HELTH_CHECK_ALL_REPOS'});
+      send({type: 'ENABLE_HEALTH_CHECK_ALL_REPOS'});
     }
   };
 
