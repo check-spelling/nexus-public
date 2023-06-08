@@ -81,7 +81,7 @@ export default class ValidationUtils {
 
     // Need to extract hostname manually because URL object has encoded hostname
     // that cannot be decoded to original form.
-    // For exampel 'http://fo£o.bar' encodes to 'xn--foo-cea.bar'.
+    // For example 'http://fo£o.bar' encodes to 'xn--foo-cea.bar'.
     const matches = str.match(/^https?:\/\/([^:/?#]+)/i);
     const hostname = matches && matches[1];
 
