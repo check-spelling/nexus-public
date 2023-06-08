@@ -78,7 +78,7 @@ export default {
         const repository = repositoryNames.length === 1 ? 'repository' : 'repositories';
         return `This rule is in use by ${repositoryNames.length} ${repository} (${repositoryLinks.join(', ')})`;
       },
-      SAVE_ERROR: 'An error occured while saving the routing rule',
+      SAVE_ERROR: 'An error occurred while saving the routing rule',
       NAME_LABEL: 'Name',
       DESCRIPTION_LABEL: 'Description',
       MODE_LABEL: 'Mode',
