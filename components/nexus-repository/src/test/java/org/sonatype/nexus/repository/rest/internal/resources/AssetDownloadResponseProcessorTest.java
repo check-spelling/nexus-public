@@ -37,7 +37,7 @@ public class AssetDownloadResponseProcessorTest
   public void testProcess_SingleResult() {
     underTest = new AssetDownloadResponseProcessor(generateAssetXOs(1), false);
     Response response = underTest.process();
-    //302 reponse is good, that means we are being redirected to the download url
+    //302 response is good, that means we are being redirected to the download url
     assertThat(response.getStatus(), is(302));
     assertThat(response.getLocation().toString(), is("http://someurl0"));
   }
@@ -60,7 +60,7 @@ public class AssetDownloadResponseProcessorTest
   public void testProcess_MultipleResultsWithSorting() {
     underTest = new AssetDownloadResponseProcessor(generateAssetXOs(2), true);
     Response response = underTest.process();
-    //302 reponse is good, that means we are being redirected to the download url
+    //302 response is good, that means we are being redirected to the download url
     assertThat(response.getStatus(), is(302));
     assertThat(response.getLocation().toString(), is("http://someurl0"));
   }
