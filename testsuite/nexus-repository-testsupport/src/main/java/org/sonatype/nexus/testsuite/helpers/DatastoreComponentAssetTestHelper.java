@@ -580,7 +580,7 @@ public class DatastoreComponentAssetTestHelper
   {
     int repositoryId = ((ContentFacetSupport) repository.facet(ContentFacet.class)).contentRepositoryId();
 
-    List<String> pathes = streamOf(repository.facet(ContentFacet.class).assets()::browse)
+    List<String> paths = streamOf(repository.facet(ContentFacet.class).assets()::browse)
         .map(FluentAsset::path)
         .filter(pathMatcher)
         .collect(Collectors.toList());
@@ -592,7 +592,7 @@ public class DatastoreComponentAssetTestHelper
             + "SET last_downloaded = ? "
             + "WHERE repository_id = ? AND path = ?")) {
 
-      for (String path : pathes) {
+      for (String path : paths) {
         stmt.setTimestamp(1, time);
         stmt.setInt(2, repositoryId);
         stmt.setString(3, path);
@@ -607,7 +607,7 @@ public class DatastoreComponentAssetTestHelper
       throw new RuntimeException(e);
     }
 
-    pathes.stream().map(path -> findAssetByPath(repository, path))
+    paths.stream().map(path -> findAssetByPath(repository, path))
         .filter(Optional::isPresent)
         .map(Optional::get)
         .forEach(asset -> sendEvent(repository, asset));
