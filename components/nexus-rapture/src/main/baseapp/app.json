@@ -504,7 +504,7 @@
      */
 
     /**
-     * File / directory name patttern to ignore when copying to the builds. Must be a
+     * File / directory name pattern to ignore when copying to the builds. Must be a
      * valid regular expression.
      */
     "ignore": [
