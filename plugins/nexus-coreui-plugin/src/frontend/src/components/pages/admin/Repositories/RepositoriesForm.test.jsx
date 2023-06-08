@@ -288,7 +288,7 @@ describe('RepositoriesForm', () => {
   ];
 
   const MAVEN_CLEANUP_RESPONSE = [
-    {id: 'policy-all-fomats', name: 'policy-all-fomats'},
+    {id: 'policy-all-formats', name: 'policy-all-formats'},
     {id: 'policy-maven-1', name: 'policy-maven-1'},
     {id: 'policy-maven-2', name: 'policy-maven-2'}
   ];
@@ -396,7 +396,7 @@ describe('RepositoriesForm', () => {
           writePolicy: 'ALLOW'
         },
         component: {proprietaryComponents: true},
-        cleanup: {policyNames: ['policy-all-fomats', 'policy-maven-1']},
+        cleanup: {policyNames: ['policy-all-formats', 'policy-maven-1']},
         maven: {
           contentDisposition: 'INLINE',
           layoutPolicy: 'STRICT',
