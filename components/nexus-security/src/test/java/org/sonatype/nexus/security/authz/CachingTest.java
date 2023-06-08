@@ -42,7 +42,7 @@ public class CachingTest
 
     // now if we update a user the cache should be cleared
     User user = securitySystem.getUser("bburton", "MockUserManagerB");
-    // different user, doesn't matter, in the future we should get a little more fine grained
+    // different user, doesn't matter, in the future we should get a little more fine-grained
     securitySystem.updateUser(user);
 
     // empty again
