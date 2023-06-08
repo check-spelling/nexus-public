@@ -80,25 +80,25 @@ public class AptITSupport
 
   protected static final String GPG_PUBLIC_KEY_NAME = "gpgPublicKey";
 
-  protected static final String METEDATA_PATH = "dists/bionic/";
+  protected static final String METADATA_PATH = "dists/bionic/";
 
   protected static final String METADATA_INRELEASE = "InRelease";
 
-  protected static final String METADATA_INRELEASE_PATH = METEDATA_PATH + METADATA_INRELEASE;
+  protected static final String METADATA_INRELEASE_PATH = METADATA_PATH + METADATA_INRELEASE;
 
   protected static final String METADATA_RELEASE = "Release";
 
-  protected static final String METADATA_RELEASE_PATH = METEDATA_PATH + METADATA_RELEASE;
+  protected static final String METADATA_RELEASE_PATH = METADATA_PATH + METADATA_RELEASE;
 
   protected static final String METADATA_RELEASE_GPG = "Release.gpg";
 
-  protected static final String METADATA_RELEASE_GPG_PATH = METEDATA_PATH + METADATA_RELEASE_GPG;
+  protected static final String METADATA_RELEASE_GPG_PATH = METADATA_PATH + METADATA_RELEASE_GPG;
 
-  public static final String PACKAGES_PATH = METEDATA_PATH + "main/binary-amd64/Packages";
+  public static final String PACKAGES_PATH = METADATA_PATH + "main/binary-amd64/Packages";
 
-  public static final String PACKAGES_BZ2_PATH = METEDATA_PATH + "main/binary-amd64/Packages.bz2";
+  public static final String PACKAGES_BZ2_PATH = METADATA_PATH + "main/binary-amd64/Packages.bz2";
 
-  public static final String PACKAGES_GZ_PATH = METEDATA_PATH + "main/binary-amd64/Packages.gz";
+  public static final String PACKAGES_GZ_PATH = METADATA_PATH + "main/binary-amd64/Packages.gz";
 
   protected static final String PROXY_REPO_NAME = "apt-proxy";
 
