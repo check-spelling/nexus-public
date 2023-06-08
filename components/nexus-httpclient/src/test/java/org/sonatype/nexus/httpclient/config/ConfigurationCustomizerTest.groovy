@@ -187,11 +187,11 @@ class ConfigurationCustomizerTest
     checkContentDisableCompressionPropagation(null)
   }
 
-  void checkContentDisableCompressionPropagation(final Boolean disableConttentCompression) {
-    when(httpClientConfiguration.getDisableContentCompression()).thenReturn(disableConttentCompression)
+  void checkContentDisableCompressionPropagation(final Boolean disableContentCompression) {
+    when(httpClientConfiguration.getDisableContentCompression()).thenReturn(disableContentCompression)
     HttpClientPlan plan = new HttpClientPlan()
     configurationCustomizer.customize(plan)
     assertThat(plan.client.contentCompressionDisabled,
-        equalTo(disableConttentCompression == null ? false : disableConttentCompression))
+        equalTo(disableContentCompression == null ? false : disableContentCompression))
   }
 }
