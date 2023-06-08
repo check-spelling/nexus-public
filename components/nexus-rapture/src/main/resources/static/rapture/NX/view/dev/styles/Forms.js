@@ -181,8 +181,8 @@ Ext.define('NX.view.dev.styles.Forms', {
             title: 'Checkbox Fieldset',
             checkboxToggle: true,
             items: [
-              { xtype: 'radio', boxLabel: 'Radio 1', name: 'radiongrp1' },
-              { xtype: 'radio', boxLabel: 'Radio 2', name: 'radiongrp1' }
+              { xtype: 'radio', boxLabel: 'Radio 1', name: 'radiogrp1' },
+              { xtype: 'radio', boxLabel: 'Radio 2', name: 'radiogrp1' }
             ]
           }
         ],
