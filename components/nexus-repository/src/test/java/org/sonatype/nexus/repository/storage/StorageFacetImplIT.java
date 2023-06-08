@@ -243,12 +243,12 @@ public class StorageFacetImplIT
           ImmutableSet.of(testRepository2), null), 0);
       assertThat(tx.countAssets("name = :name", ImmutableMap.of("name", (Object) "asset1"),
           ImmutableSet.of(testRepository2), null), is(0L));
-      // ..in testRepository1 or testRepository2, should yeild 1 match
+      // ..in testRepository1 or testRepository2, should yield 1 match
       checkSize(tx.findAssets("name = :name", ImmutableMap.of("name", (Object) "asset1"),
           ImmutableSet.of(testRepository1, testRepository2), null), 1);
       assertThat(tx.countAssets("name = :name", ImmutableMap.of("name", (Object) "asset1"),
           ImmutableSet.of(testRepository1, testRepository2), null), is(1L));
-      // ..in any repository should yeild 2 matches
+      // ..in any repository should yield 2 matches
       checkSize(tx.findAssets("name = :name", ImmutableMap.of("name", (Object) "asset1"), null, null), 1);
       assertThat(tx.countAssets("name = :name", ImmutableMap.of("name", (Object) "asset1"), null, null), is(1L));
 
