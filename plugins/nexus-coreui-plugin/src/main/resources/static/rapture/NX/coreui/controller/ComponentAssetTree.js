@@ -590,7 +590,7 @@ Ext.define('NX.coreui.controller.ComponentAssetTree', {
 
   buildPathString: function(node) {
     var path = '';
-    //node.parentNode check will skip the trees root node (labeld Root and hidden)
+    //node.parentNode check will skip the trees root node (labeled Root and hidden)
     while (node != null && node.parentNode != null) {
       path = path ? (node.get('text') + '/' + path) : node.get('text');
       node = node.parentNode;
